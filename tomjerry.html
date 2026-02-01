@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-image: url("https://i.pinimg.com/originals/9b/45/1a/9b451a62c8b2f41e6b1a9c79c7a52a5d.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Comic Sans MS', cursive;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.92);
+      padding: 25px;
+      border-radius: 18px;
+      text-align: center;
+      width: 300px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      color: #ff5c8d;
+      margin-bottom: 20px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 25px;
+      background-color: #ffb6c1;
+      color: #000;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background-color: #ff8fab;
+      transform: scale(1.05);
+    }
+
+    .no {
+      background-color: #ffd6d6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h2>Will you be my Valentine,<br> Tushar? 💖</h2>
+
+    <button onclick="sendAnswer('Yes 💖')">Yes 💖</button>
+    <button onclick="sendAnswer('Yes 😍')">Yes 😍</button>
+    <button onclick="sendAnswer('Yes obviously 🥰')">Yes obviously 🥰</button>
+    <button class="no" onclick="sendAnswer('No 😔')">No 😔</button>
+  </div>
+
+  <script>
+    function sendAnswer(answer) {
+      const email = "YOUR_EMAIL@gmail.com";  // 🔴 CHANGE THIS
+      const subject = "Valentine Answer 💌";
+      const body = "My answer is: " + answer;
+      window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+  </script>
+
+</body>
+</html>
